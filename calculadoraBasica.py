@@ -1,14 +1,19 @@
 cuenta = input("Elegir tipo de operacion(suma,resta,multiplicaicon,division): ")
-num1 = input("Insertar Primer Numero: ")
-num2 = input("Insertar Segundo Numero: ")
+num1 = float(input("Insertar Primer Numero: "))
+num2 = float(input("Insertar Segundo Numero: "))
 
 if cuenta == "suma" :
-    print(int(num1) + int(num2))
+    resultado = num1 + num2
 elif cuenta == "resta" :
-    print(int(num1) - int(num2))
+    resultado = num1 + num2
 elif cuenta == "multiplicacion" :
-    print(int(num1) * int(num2))
+    resultado = num1 * num2
 elif cuenta == "division" :
-    print(int(num1) / int(num2))
+    if num2 != 0 :
+        resultado = num1 / num2
+    else :
+        resultado = "No es posible dividir por cero"
 else :
     print("No existe esa opcion")
+    
+print('El resultado es: ' + resultado)
